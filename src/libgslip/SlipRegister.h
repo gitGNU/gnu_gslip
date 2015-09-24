@@ -300,7 +300,7 @@ namespace slip {
       void           deleteEntry(const SlipHash::ReturnTuple& tuple) { hashTable->deleteEntry(tuple); }
       Parse          getParse(const string& name) const;
       SlipHeader*    getSublist(const string& name) const;
-      string&        getSublist(SlipHeader& head) const;
+      string         getSublist(SlipHeader& head) const;
       bool           post(const SlipDatum& userData);
       bool           post(const string& name);
       bool           post(SlipDescription* definition);

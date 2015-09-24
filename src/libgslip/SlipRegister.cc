@@ -540,7 +540,7 @@ const static string sFlag[] = {"false ", "true  "};
    * @param[in] head (SlipHeader&) search key
    * @return (Parse) pointer to the parse function or <b>null</b>
    */
-   string& SlipRegister::getSublist(SlipHeader& head) const {
+   string SlipRegister::getSublist(SlipHeader& head) const {
       string name("");
       SlipBinaryEntry entry(&head);
       SlipHash::ReturnTuple tuple = hashTable->search(entry);
