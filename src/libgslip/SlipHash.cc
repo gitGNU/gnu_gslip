@@ -43,27 +43,27 @@ namespace slip {
    #define DEBUG(flag, stmt)
 #endif
 
-      SlipHash::ReturnTuple::ReturnTuple(int ndx, SlipHashEntry* entry, CONDITION condition)
-                 : ndx(ndx)
-                 , entry(entry)
-                 , condition(condition) {}
-      SlipHash::ReturnTuple::~ReturnTuple() {};
+   SlipHash::ReturnTuple::ReturnTuple(int ndx, SlipHashEntry* entry, CONDITION condition)
+              : ndx(ndx)
+              , entry(entry)
+              , condition(condition) {}
+   SlipHash::ReturnTuple::~ReturnTuple() {};
 
-      string SlipHash::ReturnTuple::toString() {
-         const string sCondition[]
-                        = { "ILLEGAL  "
-                          , "EMPTY    "
-                          , "FOUND    "
-                          , "FULL     "
-                          , "INSERTED "
-                          , "NOTEMPTY "
-                          };
+   string SlipHash::ReturnTuple::toString() {
+      const string sCondition[]
+                     = { "ILLEGAL  "
+                       , "EMPTY    "
+                       , "FOUND    "
+                       , "FULL     "
+                       , "INSERTED "
+                       , "NOTEMPTY "
+                       };
 
-         stringstream pretty;
-         pretty << setw(4) << ndx << " " << sCondition[condition] << " ";
-         if (entry) pretty << entry->toString();
-         return pretty.str();
-      };
+      stringstream pretty;
+      pretty << setw(4) << ndx << " " << sCondition[condition] << " ";
+      if (entry) pretty << entry->toString();
+      return pretty.str();
+   };
 
        /*************************************************
         *           Constructors & Destructors          *
@@ -74,7 +74,16 @@ namespace slip {
     * <p>The copy constructor is a private method and not available to mortals.</p>
     * @param[in] X (SlipHash&) an original version of a SlipHash object
     */
-   SlipHash::SlipHash(const SlipHash& X) {
+   SlipHash::SlipHash(const SlipHash& X) 
+                        : inputDebugFlag(false)    // no debug output
+                        , leakDebugFlag(false)
+                        , hashDebugFlag(false)     // no debug output
+                        , debugFlag(0)
+                        , nEntries(0)              // no entries in hash table
+                        , nProbes(0)               // no  probes > threshold
+                        , nMaxProbes(-1)           // maximum number of probes
+                        , tableSize(0)             // initial table size
+   {
    }; // SlipHash::SlipHash(const SlipHash&)
 
    /**
