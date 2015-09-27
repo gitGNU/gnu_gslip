@@ -989,8 +989,8 @@ YY_DECL
 	register char *yy_cp, *yy_bp;
 	register int yy_act;
     
-     bool stringFlag;                                /* false; quoted char    */
-     string *string_buf;                             /* input string buffer   */
+     bool stringFlag = false;                        /* false; quoted char    */
+     string *string_buf = NULL;                      /* input string buffer   */
 
 	if ( !(yy_init) )
 		{

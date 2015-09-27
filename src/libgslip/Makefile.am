@@ -34,9 +34,6 @@ sources=lex.Slip.cc Slip.Bison.cc Slip.cc SlipAsciiEntry.cc SlipBinaryEntry.cc S
 # Header files for testing SLIP
 testHead=TestErrors.h TestGlobal.h TestHeader.h TestIO.h TestMisc.h TestOperators.h TestReader.h TestReplace.h TestSequencer.h TestUtilities.h 
 
-# Source files for testing SLIP
-testCPP=SlipTest.cc TestErrors.cc TestGlobal.cc TestHeader.cc TestIO.cc TestMisc.cc  TestOperators.cc TestReader.cc TestReplace.cc TestSequencer.cc  TestUtilities.cc
-
 # Compiler flags
 AM_CXXFLAGS=-std=gnu++11 -Wall -Wno-reorder -Wno-unused-value -Wno-address -Wmaybe-uninitialized -g  -MMD -MP -MF
 

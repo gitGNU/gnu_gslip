@@ -2,7 +2,7 @@
 ## Process this file with autoconf to produce a configure script.
 
 AC_PREREQ([2.69])
-AC_INIT([GNU gSLIP], [1.0.1], [bug-gslip@gnu.org], [gslip])
+AC_INIT([GNU gSLIP], [1.0.2], [bug-gslip@gnu.org], [gslip])
 
 AC_CONFIG_FILES([
       Makefile

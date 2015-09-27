@@ -94,8 +94,8 @@ NAME        {NAMESTART}{NAMEEND}*
 FALSE       [fF][aA][lL][sS][eE]
 TRUE        [tT][rR][uU][eE]
 %%
-     bool stringFlag;                                /* false; quoted char    */
-     string *string_buf;                             /* input string buffer   */
+     bool stringFlag = false;                        /* false; quoted char    */
+     string *string_buf = NULL;                      /* input string buffer   */
 
 ,   |
 ;   |

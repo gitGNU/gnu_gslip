@@ -34,12 +34,12 @@
 # include <sstream>
 
 # include "TestUtilities.h"
+# include "TestGlobal.h"
 # include "../libgslip/SlipCell.h"
 # include "../libgslip/SlipCellBase.h"
 # include "../libgslip/SlipDef.h"
 # include "../libgslip/SlipDatum.h"
-# include "TestGlobal.h"
-#include "../libgslip/SlipSequencer.h"
+# include "../libgslip/SlipSequencer.h"
 
 using namespace slip;
 using namespace std;

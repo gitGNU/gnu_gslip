@@ -16,7 +16,7 @@
 # along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 documents = AUTHORS ChangeLog COPYING LICENSE NEWS README THANKS TODO UserManual.pdf UserManual.odt
-lang      = slip.y slip.lex
+lang      = Slip.y Slip.lex
 
 
 SUBDIRS = src

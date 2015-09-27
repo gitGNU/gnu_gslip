@@ -147,7 +147,7 @@ namespace slip {
     * @param[in] tuple (ReturnTuple&) packet containing the hash table index
     */
    void SlipHash::deleteEntry(const ReturnTuple& tuple) {
-      nEntries = (nEntries)? nEntries--: nEntries;
+      if (nEntries) nEntries--;
       hashTable[tuple.ndx] = NULL;
    }; // void SlipHash::deleteEntry(const ReturnTuple& tuple)
    

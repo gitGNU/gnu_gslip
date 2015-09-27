@@ -53,9 +53,9 @@ LOG_DRIVER          = env AM_TAP_AWK='$(AWK)' $(SHELL) $(srcdir)/tap-driver.sh
 AM_LOG_DRIVER_FLAGS = --no-merge
 
 check_PROGRAMS      = SlipTest$(EXEEXT)
-SlipTest_INCLUDE    = -I$(top_srcdir)/src
+SlipTest_INCLUDE    = -I$(top_srcdir)/src/libgslip
 SlipTest_SOURCES    = $(testCPP) $(testHead)
-LDADD               = ../libgslip/libgslip.a
+LDADD               = $(top_srcdir)/src/libgslip/libgslip.a
 TESTS               = SlipTest
 VERBOSE             = yes
 
